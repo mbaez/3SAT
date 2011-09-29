@@ -100,7 +100,7 @@ public class Expresion {
             variables.putAll(c.getTerminosHashMap());
         }
 
-        System.out.println("Variables: "+ variables.keySet());
+        //System.out.println("Variables: "+ variables.keySet());
     }
 
 }

@@ -24,20 +24,9 @@ public class Problema {
      * 
      * @param expresionString
      */
-    public Problema(String expresionString, int algoritmo) {
+    public Problema(String expresionString) {
         expresion = new Expresion(expresionString);
-        if (LASVEGAS == algoritmo) {
-            solucion = new SolucionLasVegas();
-
-        } else if (this.BACKTRACKING == algoritmo) {
-            solucion = new Solucion();
-
-        } else if (this.MVR == algoritmo) {
-            solucion = new SolucionMVR();            
-        }
-        
-        solucion.setExpresion(expresion);
-        System.out.println("Expresion : "+expresionString);
+        //System.out.println("Expresion : "+expresionString);
 
     }
 
@@ -58,6 +47,19 @@ public class Problema {
      * @return
      */
     public boolean ResolverBacktracking() {
+        solucion = new Solucion();
+        solucion.setExpresion(expresion);
+        return solucion.backtracking(new HashMap<String, Boolean>());
+    }
+
+    public boolean ResolverLasVegas() {
+        solucion = new SolucionLasVegas();
+        solucion.setExpresion(expresion);
+        return solucion.backtracking(new HashMap<String, Boolean>());
+    }
+    public boolean ResolverMVR() {
+        solucion = new SolucionMVR();
+        solucion.setExpresion(expresion);
         return solucion.backtracking(new HashMap<String, Boolean>());
     }
 }

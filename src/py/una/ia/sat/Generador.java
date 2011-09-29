@@ -35,7 +35,6 @@ public class Generador {
 
     }
 
-
     public ArrayList<String> generarVariables() {
         ArrayList<String> listaVariables = new ArrayList<String>(nroClausulas * 3);
 

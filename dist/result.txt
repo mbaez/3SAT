@@ -1,0 +1,30 @@
+
+============================================
+Clausulas:5
+Variables: 5
+Algo:	BT ms.	LV ms.	MVR ms.
+Time:	8 ms.	11 ms.	20ms.
+
+============================================
+Clausulas:5
+Variables: 10
+Algo:	BT ms.	LV ms.	MVR ms.
+Time:	19 ms.	85 ms.	28ms.
+
+============================================
+Clausulas:5
+Variables: 15
+Algo:	BT ms.	LV ms.	MVR ms.
+Time:	1892 ms.	173 ms.	2580ms.
+
+============================================
+Clausulas:10
+Variables: 5
+Algo:	BT ms.	LV ms.	MVR ms.
+Time:	50 ms.	54 ms.	76ms.
+
+============================================
+Clausulas:10
+Variables: 10
+Algo:	BT ms.	LV ms.	MVR ms.
+Time:	1376 ms.	1657 ms.	2301ms.
