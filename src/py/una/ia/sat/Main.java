@@ -18,7 +18,6 @@ public class Main {
         Problema  p = new Problema("(xvyvz)^(!xv!yv!z)");
         p.ResolverBacktracking();
         p.printSoluciones();
-        
 
     }
 

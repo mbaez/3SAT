@@ -13,6 +13,7 @@ public class Variable {
     private String id;
     private boolean notValue;
     private boolean value;
+
     /**
      * 
      * @param termino
@@ -20,6 +21,7 @@ public class Variable {
     public Variable(String termino){
         procesar(termino);
     }
+
     /**
      *
      * @return
@@ -27,6 +29,7 @@ public class Variable {
     public String getId(){
         return id;
     }
+
     /**
      * 
      * @return
@@ -34,6 +37,7 @@ public class Variable {
     public boolean getNotValue(){
         return notValue;
     }
+
     /**
      *
      * @return
@@ -41,6 +45,7 @@ public class Variable {
     public boolean getValue(){
         return value;
     }
+
     /**
      *
      * @param termino
@@ -54,6 +59,7 @@ public class Variable {
         id = termino.replace("!", "");
 
     }
+
     /**
      * 
      * @return
@@ -64,6 +70,7 @@ public class Variable {
             return value;
         return !value;
     }
+
     /**
      * 
      * @param id
