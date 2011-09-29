@@ -42,7 +42,7 @@ public class Solucion {
             HashMap<String, Boolean> solucion = new HashMap<String, Boolean>();
             solucion.putAll(asignadas);
             this.soluciones.add(solucion);
-            return false;
+            return true;
         }
 
         String seleccionada = seleccionarVariableNoAsignada(asignadas);

@@ -11,7 +11,7 @@ package py.una.ia.sat;
  */
 public class Variable {
     private String id;
-    private boolean notValue;
+    private boolean negado;
     private boolean value;
 
     /**
@@ -34,8 +34,8 @@ public class Variable {
      * 
      * @return
      */
-    public boolean getNotValue(){
-        return notValue;
+    public boolean getNegado(){
+        return negado;
     }
 
     /**
@@ -52,9 +52,9 @@ public class Variable {
      */
     private void procesar(String termino){
         if(termino.contains("!")){
-            notValue = false;
+            negado = true;
         }else{
-            notValue = true;
+            negado = false;
         }
         id = termino.replace("!", "");
 
@@ -65,10 +65,10 @@ public class Variable {
      * @return
      */
     public boolean evaluar(){
-       //System.out.print( notValue+"&&"+ value);
-        if (notValue)
-            return value;
-        return !value;
+       //System.out.print( negado+"&&"+ value);
+        if (negado)
+            return !value;
+        return value;
     }
 
     /**

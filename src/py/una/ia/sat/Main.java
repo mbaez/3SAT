@@ -15,9 +15,13 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Problema  p = new Problema("(xvyvz)^(!xv!yv!z)");
+        Generador gen = new Generador(100, 20);
+        Problema  p = new Problema(gen.generarExpresion(), Problema.MVR);
+        long start = System.currentTimeMillis();
         p.ResolverBacktracking();
-        p.printSoluciones();
+        long end = System.currentTimeMillis();
+        //p.printSoluciones();
+        System.out.println("Time: "+ (end-start) + " ms." );
 
     }
 

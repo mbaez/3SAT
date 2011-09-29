@@ -27,7 +27,7 @@ public class Expresion {
         variables = new HashMap<String, Boolean>();
         procesar(expresion);
         initTablaVariables();
-        System.out.println("Expresion: "+ expresion);
+        //System.out.println("Expresion: "+ expresion);
     }
     /**
      * 
@@ -97,7 +97,7 @@ public class Expresion {
     private void initTablaVariables(){
 
         for(Conjuncion c : conjunciones){
-            variables.putAll(c.getTerminos());
+            variables.putAll(c.getTerminosHashMap());
         }
 
         System.out.println("Variables: "+ variables.keySet());

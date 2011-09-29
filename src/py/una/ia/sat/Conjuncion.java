@@ -54,12 +54,15 @@ public class Conjuncion {
         }
         return resp;
     }
+    public ArrayList<Variable> getTerminos(){
+        return terminos;
+    }
     
     /**
      * 
      * @return
      */
-    public HashMap<String, Boolean> getTerminos(){
+    public HashMap<String, Boolean> getTerminosHashMap(){
         HashMap<String, Boolean> tablaVariables = new HashMap<String, Boolean>();
          for(Variable t : terminos){
             tablaVariables.put(t.getId(),null);
