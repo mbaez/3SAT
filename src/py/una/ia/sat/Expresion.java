@@ -81,13 +81,14 @@ public class Expresion {
      * @return
      */
     public boolean evaluar(){
-        boolean result = true;
-
+        boolean resp = true;
         for(Conjuncion c : conjunciones){
-            result &= c.evaluar();
+            if (!c.evaluar())
+                resp = false;
+            //System.out.print(") ^ (");
         }
 
-        return result;
+        return resp;
     }
     
     /**

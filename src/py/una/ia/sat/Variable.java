@@ -53,15 +53,16 @@ public class Variable {
         }
         id = termino.replace("!", "");
 
-        //System.out.println(notValue+" " + id);
     }
     /**
      * 
      * @return
      */
     public boolean evaluar(){
-
-        return notValue && value;
+       //System.out.print( notValue+"&&"+ value);
+        if (notValue)
+            return value;
+        return !value;
     }
     /**
      * 

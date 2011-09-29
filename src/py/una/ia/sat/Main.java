@@ -15,13 +15,10 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        Expresion c = new Expresion("(xvy)^(xv!y)^(xvy)^(!xvp)");
-        for(Object id : c.getVariables().keySet()){
-            c.setTableValueAt((String)id, true);
-        }
-        c.printTabla();
-        System.out.println("Valor: "+ c.evaluar());
+        Problema  p = new Problema("(xvyvz)^(!xv!yv!z)");
+        p.ResolverBacktracking();
+        p.printSoluciones();
+        
 
     }
 

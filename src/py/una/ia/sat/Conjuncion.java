@@ -46,12 +46,13 @@ public class Conjuncion {
      * @return
      */
     public boolean evaluar(){
-        boolean result = false;
-
+        boolean resp = false;
         for(Variable t : terminos){
-            result |= t.evaluar();
+            if (t.evaluar())
+                resp= true;
+            //System.out.print(" v ");
         }
-        return result;
+        return resp;
     }
     
     /**
