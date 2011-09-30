@@ -47,6 +47,7 @@ public class Generador {
 
     public String generarExpresion() {
         int contVariables = 0;
+        expresion= "";
         listaVar = generarVariables();
         for(int i = 0; i < nroClausulas; i++) {
 

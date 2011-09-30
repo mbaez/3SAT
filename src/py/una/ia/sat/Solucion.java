@@ -49,7 +49,9 @@ public class Solucion {
             this.soluciones.add(solucion);
             return true;
         }
-
+        /*else if(nodos > (expresion.getVariables().size()*expresion.getConjunciones().size())*1000)
+            return true;
+        */
         String seleccionada = seleccionarVariableNoAsignada(asignadas);
 
         if (seleccionada == null) {

@@ -32,6 +32,9 @@ public class Problema {
     public int getNodosExpandidos(){
         return solucion.getNodos();
     }
+    public Solucion getSoluciones(){
+        return solucion;
+    }
     /**
      *
      * @return
