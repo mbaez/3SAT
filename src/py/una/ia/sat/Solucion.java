@@ -17,6 +17,7 @@ public class Solucion {
     protected ArrayList<HashMap<String, Boolean>> soluciones;
     protected HashMap<String, Boolean> asignadas;
     protected boolean[] dominioVariable = {true, false};
+    protected int nodos=0;
 
     /**
      *
@@ -29,6 +30,9 @@ public class Solucion {
     public void setExpresion(Expresion expresion) {
         this.expresion = expresion;
     }
+    public int getNodos(){
+        return nodos;
+    }
 
     /**
      *
@@ -37,7 +41,8 @@ public class Solucion {
      */
     public boolean backtracking(HashMap<String, Boolean> asignadas) {
         //System.out.println("Asignacion: "+asignadas + "\tCompletitud:"+esCompleto(asignadas));
-        if (esCompleto(asignadas)) {
+        nodos++;
+        if (esCompleto(asignadas) && expresion.evaluar()) {
 
             HashMap<String, Boolean> solucion = new HashMap<String, Boolean>();
             solucion.putAll(asignadas);
@@ -93,8 +98,7 @@ public class Solucion {
     private boolean esCompleto(HashMap<String, Boolean> asignadas) {
         //System.out.println("EVAL:"+ expresion.evaluar());
         //System.out.println("\n");
-        boolean resp = asignadas.size() == expresion.getVariables().size()
-                && expresion.evaluar();
+        boolean resp = asignadas.size() == expresion.getVariables().size();
         // System.out.println("\n");
         return resp;
     }

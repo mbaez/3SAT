@@ -46,13 +46,12 @@ public class Conjuncion {
      * @return
      */
     public boolean evaluar(){
-        boolean resp = false;
         for(Variable t : terminos){
             if (t.evaluar())
-                resp= true;
+                return true;
             //System.out.print(" v ");
         }
-        return resp;
+        return false;
     }
     public ArrayList<Variable> getTerminos(){
         return terminos;

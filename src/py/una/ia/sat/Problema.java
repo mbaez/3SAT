@@ -29,7 +29,9 @@ public class Problema {
         //System.out.println("Expresion : "+expresionString);
 
     }
-
+    public int getNodosExpandidos(){
+        return solucion.getNodos();
+    }
     /**
      *
      * @return
